@@ -1,9 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { BookOpenIcon, ArrowUpTrayIcon } from '@heroicons/react/24/outline';
-import axios from 'axios';
-import { ENDPOINTS, getHeaders } from '@/src/config/api';
+import { ArrowUpTrayIcon } from '@heroicons/react/24/outline';
 
 interface Strategy {
   strategyName: string;
@@ -16,44 +14,7 @@ interface Strategy {
 }
 
 export default function BookAnalysis() {
-  const [files, setFiles] = useState<File[]>([]);
-  const [strategies, setStrategies] = useState<Strategy[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      setFiles(Array.from(e.target.files));
-    }
-  };
-
-  const handleUpload = async () => {
-    if (files.length === 0) return;
-
-    setLoading(true);
-    setError('');
-
-    try {
-      const formData = new FormData();
-      files.forEach(file => {
-        formData.append('books', file);
-      });
-
-      const response = await axios.post(ENDPOINTS.BOOKS + '/upload', formData, {
-        headers: {
-          ...getHeaders(),
-          'Content-Type': 'multipart/form-data',
-        },
-      });
-
-      setStrategies(response.data.strategies);
-    } catch (err) {
-      setError('Failed to upload books. Please try again.');
-      console.error('Upload error:', err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const [strategies] = useState<Strategy[]>([]);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -62,51 +23,17 @@ export default function BookAnalysis() {
       {/* File Upload Section */}
       <div className="bg-white rounded-lg shadow-md p-6 mb-8">
         <div className="flex items-center justify-center w-full">
-          <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+          <div className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg bg-gray-50">
             <div className="flex flex-col items-center justify-center pt-5 pb-6">
               <ArrowUpTrayIcon className="w-12 h-12 text-gray-400 mb-4" />
               <p className="mb-2 text-sm text-gray-500">
-                <span className="font-semibold">Click to upload</span> or drag and drop
+                <span className="font-semibold">Upload Feature Currently Disabled</span>
               </p>
-              <p className="text-xs text-gray-500">PDF files only</p>
+              <p className="text-xs text-gray-500">This feature is temporarily unavailable</p>
             </div>
-            <input
-              type="file"
-              className="hidden"
-              multiple
-              accept=".pdf"
-              onChange={handleFileChange}
-            />
-          </label>
-        </div>
-        
-        {files.length > 0 && (
-          <div className="mt-4">
-            <h3 className="font-semibold mb-2">Selected files:</h3>
-            <ul className="list-disc list-inside">
-              {files.map((file, index) => (
-                <li key={index} className="text-sm text-gray-600">
-                  {file.name}
-                </li>
-              ))}
-            </ul>
-            <button
-              onClick={handleUpload}
-              disabled={loading}
-              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-blue-400"
-            >
-              {loading ? 'Uploading...' : 'Upload and Analyze'}
-            </button>
           </div>
-        )}
-      </div>
-
-      {/* Error Message */}
-      {error && (
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-          {error}
         </div>
-      )}
+      </div>
 
       {/* Strategies Display */}
       {strategies.length > 0 && (
