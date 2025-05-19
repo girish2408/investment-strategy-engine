@@ -1,6 +1,7 @@
 version: 1
 applications:
-  - frontend:
+  - appRoot: client
+    frontend:
       phases:
         preBuild:
           commands:
@@ -12,13 +13,14 @@ applications:
             # Build client
             - npm run build
       artifacts:
-        baseDirectory: client/.next
+        baseDirectory: .next
         files:
           - '**/*'
       cache:
         paths:
-          - client/node_modules/**/*
-  - backend:
+          - node_modules/**/*
+  - appRoot: server
+    backend:
       phases:
         preBuild:
           commands:
@@ -28,10 +30,9 @@ applications:
           commands:
             - npm run build
       artifacts:
-        baseDirectory: server/dist
+        baseDirectory: dist
         files:
           - '**/*'
       cache:
         paths:
-          - server/node_modules/**/*
-    appRoot: client 
+          - node_modules/**/* 
