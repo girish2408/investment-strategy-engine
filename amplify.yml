@@ -5,23 +5,27 @@ frontend:
       commands:
         - pwd
         - ls -la
+        - cd investment-strategy-engine
+        - ls -la
         - if [ ! -d "client" ]; then echo "Client directory not found"; exit 1; fi
         - cd client && npm ci
     build:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: client/.next
+    baseDirectory: investment-strategy-engine/client/.next
     files:
       - '**/*'
   cache:
     paths:
-      - client/node_modules/**/*
+      - investment-strategy-engine/client/node_modules/**/*
 backend:
   phases:
     preBuild:
       commands:
         - pwd
+        - ls -la
+        - cd investment-strategy-engine
         - ls -la
         - if [ ! -d "server" ]; then echo "Server directory not found"; exit 1; fi
         - cd server && npm ci
@@ -29,9 +33,9 @@ backend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: server/dist
+    baseDirectory: investment-strategy-engine/server/dist
     files:
       - '**/*'
   cache:
     paths:
-      - server/node_modules/**/* 
+      - investment-strategy-engine/server/node_modules/**/* 
