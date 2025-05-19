@@ -1,0 +1,294 @@
+[
+  {
+    "id": "1747502695002-nvp8blm9p",
+    "pageContent": "This strategy emphasizes the importance of recognizing the difference between speculation and investment to ensure that speculative activities do not endanger the overall portfolio. It advocates for setting strict boundaries on speculative activities to prevent them from being mistaken for genuine investment practices.",
+    "metadata": {
+      "strategyName": "Distinguishing Speculation from Investment",
+      "description": "This strategy emphasizes the importance of recognizing the difference between speculation and investment to ensure that speculative activities do not endanger the overall portfolio. It advocates for setting strict boundaries on speculative activities to prevent them from being mistaken for genuine investment practices.",
+      "fundamentalCriteria": [],
+      "technicalPatterns": [],
+      "riskManagement": [
+        "Never delude yourself into thinking that you're investing when you're actually speculating.",
+        "Speculating becomes mortally dangerous the moment you begin to take it seriously.",
+        "Put strict limits on the amount you are willing to wager on speculative activities."
+      ],
+      "entryExitRules": [],
+      "portfolioGuidelines": [
+        "Designate a tiny portion of the total portfolio for speculative activities, ideally no more than 10% of overall wealth.",
+        "Keep the money in your speculative account separate from your investment accounts.",
+        "Never allow speculative thinking to influence your investing activities.",
+        "Do not increase the speculative account beyond 10% of your assets, regardless of circumstances."
+      ],
+      "sourceBook": "The Intelligent Investor - BENJAMIN GRAHAM.pdf",
+      "isProprietary": false,
+      "createdAt": "2025-05-17T17:24:55.000Z",
+      "updatedAt": "2025-05-17T17:24:55.002Z"
+    }
+  },
+  {
+    "id": "1747502695002-lrmq170kh",
+    "pageContent": "This strategy involves adjusting your investment portfolio based on personal life circumstances, financial goals, and risk tolerance. It emphasizes the importance of considering factors such as marital status, career stability, future financial obligations, and income needs to determine the appropriate mix of stocks and bonds. The strategy advocates for a disciplined approach to investing, avoiding market timing and maintaining a predetermined asset allocation that aligns with one's risk capacity and financial objectives.",
+    "metadata": {
+      "strategyName": "Life Circumstance-Based Portfolio Allocation",
+      "description": "This strategy involves adjusting your investment portfolio based on personal life circumstances, financial goals, and risk tolerance. It emphasizes the importance of considering factors such as marital status, career stability, future financial obligations, and income needs to determine the appropriate mix of stocks and bonds. The strategy advocates for a disciplined approach to investing, avoiding market timing and maintaining a predetermined asset allocation that aligns with one's risk capacity and financial objectives.",
+      "fundamentalCriteria": [
+        "Marital status and partner's occupation",
+        "Future financial obligations (e.g., children's education)",
+        "Potential inheritance or financial responsibility for parents",
+        "Career stability and factors affecting it",
+        "Income needs and ability to supplement income through investments"
+      ],
+      "technicalPatterns": [],
+      "riskManagement": [
+        "Assess how much money can be afforded to lose on investments",
+        "Adjust bond and stock allocation based on personal risk tolerance and financial situation"
+      ],
+      "entryExitRules": [],
+      "portfolioGuidelines": [
+        "Minimum of 25% in bonds or cash for those with higher risk tolerance",
+        "Maximum of 75% in bonds or cash for those with lower risk tolerance",
+        "Consider up to 100% in bonds or cash based on extreme risk aversion (details on p. 105 not provided)",
+        "Change target percentages only as life circumstances change, not based on market movements",
+        "Rebalance portfolio to maintain target asset allocation, using a disciplined and predictable schedule"
+      ],
+      "sourceBook": "The Intelligent Investor - BENJAMIN GRAHAM.pdf",
+      "isProprietary": false,
+      "createdAt": "2025-05-17T17:24:55.002Z",
+      "updatedAt": "2025-05-17T17:24:55.002Z"
+    }
+  },
+  {
+    "id": "1747502695002-oz4o6odja",
+    "pageContent": "This strategy involves choosing between long-term and short-term bond investments based on the investor's personal preference for yield versus market value stability. It emphasizes the importance of understanding one's own investment goals and risk tolerance when selecting bonds.",
+    "metadata": {
+      "strategyName": "Bond Investment Strategy Based on Personal Preferences",
+      "description": "This strategy involves choosing between long-term and short-term bond investments based on the investor's personal preference for yield versus market value stability. It emphasizes the importance of understanding one's own investment goals and risk tolerance when selecting bonds.",
+      "fundamentalCriteria": [
+        "Yield percentage",
+        "Credit rating of the bond issuer",
+        "Tax implications"
+      ],
+      "technicalPatterns": [],
+      "riskManagement": [
+        "Choose U.S. savings bonds for guaranteed market value",
+        "Be prepared for price fluctuations with higher-yield corporate or municipal bonds"
+      ],
+      "entryExitRules": [
+        "Invest in Series E or H U.S. savings bonds for stable market value and a 5% yield",
+        "Invest in long-term corporate bonds or tax-free municipals for higher yields with acceptance of price fluctuation"
+      ],
+      "portfolioGuidelines": [
+        "Diversify between different types of bonds based on personal risk tolerance and investment horizon",
+        "Consider using the amortized cost method for valuing high-rated bonds to disregard market price fluctuations"
+      ],
+      "sourceBook": "The Intelligent Investor - BENJAMIN GRAHAM.pdf",
+      "isProprietary": false,
+      "createdAt": "2025-05-17T17:24:55.002Z",
+      "updatedAt": "2025-05-17T17:24:55.002Z"
+    }
+  },
+  {
+    "id": "1747502695002-h0s8zly1c",
+    "pageContent": "This strategy focuses on investing in convertible bonds and preferred stocks, taking into account their price fluctuations due to variations in related common stock prices, the credit standing of the company, and general interest rates. It highlights the need for investors to be aware of the triple factors affecting price variations and to manage expectations regarding the safety and price appreciation potential of these investments.",
+    "metadata": {
+      "strategyName": "Convertible Bonds and Preferred Stocks Investment Strategy",
+      "description": "This strategy focuses on investing in convertible bonds and preferred stocks, taking into account their price fluctuations due to variations in related common stock prices, the credit standing of the company, and general interest rates. It highlights the need for investors to be aware of the triple factors affecting price variations and to manage expectations regarding the safety and price appreciation potential of these investments.",
+      "fundamentalCriteria": [
+        "Credit rating of the company",
+        "Yield percentage",
+        "Tax implications",
+        "Related common stock price"
+      ],
+      "technicalPatterns": [],
+      "riskManagement": [
+        "Be prepared for wide price variations due to triply unsettling influences",
+        "Understand that convertible issues may not always offer the ideal combination of safety and price appreciation"
+      ],
+      "entryExitRules": [],
+      "portfolioGuidelines": [
+        "Diversify within convertible bonds and preferred stocks to mitigate risk from wide price variations",
+        "Consider the financial health and credit rating of the issuing company as a key factor in investment decisions"
+      ],
+      "sourceBook": "The Intelligent Investor - BENJAMIN GRAHAM.pdf",
+      "isProprietary": false,
+      "createdAt": "2025-05-17T17:24:55.002Z",
+      "updatedAt": "2025-05-17T17:24:55.002Z"
+    }
+  },
+  {
+    "id": "1747502695002-3xa7vtgiy",
+    "pageContent": "This strategy focuses on analyzing a company's average earnings over a seven to ten-year period to iron out fluctuations due to business cycles. It includes special charges and credits in the calculation to get a comprehensive view of the company's operating history. This approach is used in conjunction with growth and stability ratings to assess the company's past performance.",
+    "metadata": {
+      "strategyName": "Long-Term Earnings Analysis",
+      "description": "This strategy focuses on analyzing a company's average earnings over a seven to ten-year period to iron out fluctuations due to business cycles. It includes special charges and credits in the calculation to get a comprehensive view of the company's operating history. This approach is used in conjunction with growth and stability ratings to assess the company's past performance.",
+      "fundamentalCriteria": [
+        "Average earnings over the past seven to ten years",
+        "Inclusion of special charges and credits in earnings calculation",
+        "Growth and stability of earnings during the same period"
+      ],
+      "technicalPatterns": [],
+      "riskManagement": [],
+      "entryExitRules": [],
+      "portfolioGuidelines": [],
+      "sourceBook": "The Intelligent Investor - BENJAMIN GRAHAM.pdf",
+      "isProprietary": false,
+      "createdAt": "2025-05-17T17:24:55.002Z",
+      "updatedAt": "2025-05-17T17:24:55.002Z"
+    }
+  },
+  {
+    "id": "1747502695002-zbgo953i3",
+    "pageContent": "This strategy emphasizes the importance of accounting for a company's growth in its valuation by comparing the average earnings of the last three years with those from ten years prior. Special charges or credits are addressed on a compromise basis. This method aims to provide a clear picture of the company's growth trajectory, which is crucial for making informed investment decisions.",
+    "metadata": {
+      "strategyName": "Growth Rate Calculation",
+      "description": "This strategy emphasizes the importance of accounting for a company's growth in its valuation by comparing the average earnings of the last three years with those from ten years prior. Special charges or credits are addressed on a compromise basis. This method aims to provide a clear picture of the company's growth trajectory, which is crucial for making informed investment decisions.",
+      "fundamentalCriteria": [
+        "Average earnings comparison between the last three years and ten years earlier",
+        "Adjustment for special charges or credits"
+      ],
+      "technicalPatterns": [],
+      "riskManagement": [],
+      "entryExitRules": [],
+      "portfolioGuidelines": [],
+      "sourceBook": "The Intelligent Investor - BENJAMIN GRAHAM.pdf",
+      "isProprietary": false,
+      "createdAt": "2025-05-17T17:24:55.002Z",
+      "updatedAt": "2025-05-17T17:24:55.002Z"
+    }
+  },
+  {
+    "id": "1747502695002-3phz4vmzb",
+    "pageContent": "This strategy focuses on finding undervalued stocks with strong fundamentals and a good dividend history. The goal is to invest in companies that are trading below their intrinsic value but have the potential for long-term growth.",
+    "metadata": {
+      "strategyName": "Value Investing Strategy",
+      "description": "This strategy focuses on finding undervalued stocks with strong fundamentals and a good dividend history. The goal is to invest in companies that are trading below their intrinsic value but have the potential for long-term growth.",
+      "fundamentalCriteria": [
+        "P/E ratio below industry average",
+        "P/B ratio less than 1.5",
+        "Positive earnings growth over the past 5 years",
+        "Dividend yield higher than the industry average",
+        "Strong balance sheet with low debt"
+      ],
+      "technicalPatterns": [
+        "Support and resistance levels",
+        "Moving averages crossover"
+      ],
+      "riskManagement": [
+        "Stop-loss orders set at 10% below purchase price",
+        "Position sizing: No more than 5% of portfolio in a single stock"
+      ],
+      "entryExitRules": [
+        "Enter when stock breaks above resistance with high volume",
+        "Exit when stock falls below support or hits predetermined price target"
+      ],
+      "portfolioGuidelines": [
+        "Diversify across at least 5 different sectors",
+        "Rebalance portfolio quarterly",
+        "Allocate 60% to undervalued stocks, 20% to growth stocks, and 20% to dividend-paying stocks"
+      ],
+      "sourceBook": "The Intelligent Investor - BENJAMIN GRAHAM.pdf",
+      "isProprietary": false,
+      "createdAt": "2025-05-17T17:24:55.002Z",
+      "updatedAt": "2025-05-17T17:24:55.002Z"
+    }
+  },
+  {
+    "id": "1747502695002-04n35s4j5",
+    "pageContent": "This strategy aims to invest in companies that exhibit signs of above-average growth, even if the share price appears expensive in terms of metrics like P/E ratio. The focus is on companies with potential for significant revenue and earnings growth.",
+    "metadata": {
+      "strategyName": "Growth Investing Strategy",
+      "description": "This strategy aims to invest in companies that exhibit signs of above-average growth, even if the share price appears expensive in terms of metrics like P/E ratio. The focus is on companies with potential for significant revenue and earnings growth.",
+      "fundamentalCriteria": [
+        "Earnings growth rate higher than 20% per annum over the past 3 years",
+        "Reinvested earnings leading to accelerated growth",
+        "Strong Return on Equity (ROE) and Return on Assets (ROA)",
+        "Innovative product or service with a competitive advantage"
+      ],
+      "technicalPatterns": [
+        "Bullish chart patterns such as cup and handle, breakout above consolidation",
+        "High relative strength index (RSI) indicating strong momentum"
+      ],
+      "riskManagement": [
+        "Limit position size to 2-3% of total portfolio",
+        "Use trailing stop losses to protect gains"
+      ],
+      "entryExitRules": [
+        "Buy during pullbacks in an uptrend",
+        "Sell when growth slows down significantly or when the stock achieves a 50-100% gain"
+      ],
+      "portfolioGuidelines": [
+        "Maximum of 10-15 growth stocks in the portfolio",
+        "Avoid overconcentration in a single sector",
+        "Keep 10% of portfolio in cash to take advantage of new opportunities"
+      ],
+      "sourceBook": "The Intelligent Investor - BENJAMIN GRAHAM.pdf",
+      "isProprietary": false,
+      "createdAt": "2025-05-17T17:24:55.002Z",
+      "updatedAt": "2025-05-17T17:24:55.002Z"
+    }
+  },
+  {
+    "id": "1747502695002-braztbunk",
+    "pageContent": "This strategy involves shareholders demanding from their management either a normal payout of earnings, roughly two-thirds of the earnings, or a clear demonstration that reinvested profits have led to a satisfactory increase in per-share earnings. It is based on the belief that companies showing slower growth should be more liberal with their cash dividends, as this can indicate the company's prosperity and influence its market price positively.",
+    "metadata": {
+      "strategyName": "Dividend Demand Strategy",
+      "description": "This strategy involves shareholders demanding from their management either a normal payout of earnings, roughly two-thirds of the earnings, or a clear demonstration that reinvested profits have led to a satisfactory increase in per-share earnings. It is based on the belief that companies showing slower growth should be more liberal with their cash dividends, as this can indicate the company's prosperity and influence its market price positively.",
+      "fundamentalCriteria": [
+        "Company's growth rate",
+        "Dividend payout ratio",
+        "Per-share earnings increase",
+        "Financial position of the company",
+        "Use of reinvested profits for business expansion"
+      ],
+      "technicalPatterns": [],
+      "riskManagement": [
+        "Demanding a normal payout of earnings or satisfactory reinvestment benefits",
+        "Evaluating the financial position and management's decisions",
+        "Critiquing and possibly complaining about niggardly dividend policies"
+      ],
+      "entryExitRules": [
+        "Enter or invest more in companies that comply with these dividend or reinvestment criteria",
+        "Consider exiting or reducing investment in companies that fail to demonstrate satisfactory use of reinvested profits or have unjustifiably low payouts"
+      ],
+      "portfolioGuidelines": [
+        "Diversify across companies with different growth rates but favorable dividend policies or reinvestment outcomes",
+        "Allocate a portion of the portfolio to recognized growth companies with satisfactory reinvestment benefits",
+        "Monitor financial health and management decisions of companies within the portfolio"
+      ],
+      "sourceBook": "The Intelligent Investor - BENJAMIN GRAHAM.pdf",
+      "isProprietary": false,
+      "createdAt": "2025-05-17T17:24:55.002Z",
+      "updatedAt": "2025-05-17T17:24:55.002Z"
+    }
+  },
+  {
+    "id": "1747502695002-e67sn3gth",
+    "pageContent": "This investment strategy involves buying securities at a significant discount to their intrinsic value, thereby ensuring a margin of safety. It is based on the principle that buying a dollar bill for less than its value (e.g., 40 cents vs. 60 cents) presents a lower risk and a higher potential reward. The strategy emphasizes understanding business valuation, investing with honest and competent management, and ensuring a substantial margin of safety to minimize risk.",
+    "metadata": {
+      "strategyName": "Value Investing with Margin of Safety",
+      "description": "This investment strategy involves buying securities at a significant discount to their intrinsic value, thereby ensuring a margin of safety. It is based on the principle that buying a dollar bill for less than its value (e.g., 40 cents vs. 60 cents) presents a lower risk and a higher potential reward. The strategy emphasizes understanding business valuation, investing with honest and competent management, and ensuring a substantial margin of safety to minimize risk.",
+      "fundamentalCriteria": [
+        "Intrinsic value of assets significantly higher than market price",
+        "Honest and competent management",
+        "Businesses with understandable and estimable value"
+      ],
+      "technicalPatterns": [],
+      "riskManagement": [
+        "Ensure a significant margin of safety",
+        "Invest in businesses with a clear understanding of their value to minimize risk"
+      ],
+      "entryExitRules": [
+        "Buy when a security is significantly undervalued",
+        "Sell when the security reaches or exceeds its intrinsic value"
+      ],
+      "portfolioGuidelines": [
+        "Diversify by buying several undervalued securities to spread risk",
+        "Position sizing should reflect the level of confidence in the valuation and the size of the margin of safety"
+      ],
+      "sourceBook": "The Intelligent Investor - BENJAMIN GRAHAM.pdf",
+      "isProprietary": false,
+      "createdAt": "2025-05-17T17:24:55.002Z",
+      "updatedAt": "2025-05-17T17:24:55.002Z"
+    }
+  }
+]

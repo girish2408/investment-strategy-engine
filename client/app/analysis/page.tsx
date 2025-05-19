@@ -131,7 +131,7 @@ export default function StockAnalysis() {
     if (!indicator || Object.keys(indicator).length === 0) return null;
     const values = Object.entries(indicator)
       .sort(([dateA], [dateB]) => new Date(dateB).getTime() - new Date(dateA).getTime());
-    return values.length > 0 ? parseFloat(values[0][1]) : null;
+    return values.length > 0 ? values[0][1] : null;
   };
 
   const getIndicatorTrend = (indicator: Record<string, number> | undefined): 'up' | 'down' | 'neutral' | null => {
@@ -139,7 +139,7 @@ export default function StockAnalysis() {
     const values = Object.entries(indicator)
       .sort(([dateA], [dateB]) => new Date(dateB).getTime() - new Date(dateA).getTime())
       .slice(0, 2)
-      .map(([, value]) => parseFloat(value));
+      .map(([, value]) => value);
     
     if (values.length < 2) return null;
     const diff = values[0] - values[1];

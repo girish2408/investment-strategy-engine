@@ -11,7 +11,6 @@ build/
 dist/
 
 # Data
-data/
 .env
 .env.local
 .env.development.local
