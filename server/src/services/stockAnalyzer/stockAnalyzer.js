@@ -346,15 +346,24 @@ class StockAnalyzer {
       "recommendation": string
     }`;
 
-    const response = await this.llm.invoke(prompt);
-    // Clean the response to ensure it's valid JSON
-    const cleanedResponse = response.replace(/```json\n?|\n?```/g, '').trim();
     try {
-      return JSON.parse(cleanedResponse);
+      const response = await this.llm.invoke(prompt);
+      // Extract the content from the ChatOpenAI response
+      const content = response.content || response.text || response;
+      
+      // Clean the response to ensure it's valid JSON
+      const cleanedResponse = content.replace(/```json\n?|\n?```/g, '').trim();
+      
+      try {
+        return JSON.parse(cleanedResponse);
+      } catch (error) {
+        console.error('Error parsing LLM response:', error);
+        console.error('Raw response:', content);
+        throw new Error('Failed to parse analysis response');
+      }
     } catch (error) {
-      console.error('Error parsing LLM response:', error);
-      console.error('Raw response:', response);
-      throw new Error('Failed to parse analysis response');
+      console.error('Error getting LLM response:', error);
+      throw new Error('Failed to get analysis from LLM');
     }
   }
 }
