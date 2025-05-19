@@ -5,7 +5,9 @@ frontend:
       commands:
         - pwd
         - ls -la
-        - cd investment-strategy-engine
+        - REPO_DIR=$(find . -maxdepth 1 -type d -not -path "*/\.*" | head -n 1)
+        - echo "Repository directory: $REPO_DIR"
+        - cd "$REPO_DIR"
         - ls -la
         - if [ ! -d "client" ]; then echo "Client directory not found"; exit 1; fi
         - cd client && npm ci
@@ -13,19 +15,21 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: investment-strategy-engine/client/.next
+    baseDirectory: client/.next
     files:
       - '**/*'
   cache:
     paths:
-      - investment-strategy-engine/client/node_modules/**/*
+      - client/node_modules/**/*
 backend:
   phases:
     preBuild:
       commands:
         - pwd
         - ls -la
-        - cd investment-strategy-engine
+        - REPO_DIR=$(find . -maxdepth 1 -type d -not -path "*/\.*" | head -n 1)
+        - echo "Repository directory: $REPO_DIR"
+        - cd "$REPO_DIR"
         - ls -la
         - if [ ! -d "server" ]; then echo "Server directory not found"; exit 1; fi
         - cd server && npm ci
@@ -33,9 +37,9 @@ backend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: investment-strategy-engine/server/dist
+    baseDirectory: server/dist
     files:
       - '**/*'
   cache:
     paths:
-      - investment-strategy-engine/server/node_modules/**/* 
+      - server/node_modules/**/* 
