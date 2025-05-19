@@ -3,43 +3,45 @@ frontend:
   phases:
     preBuild:
       commands:
-        - pwd
-        - ls -la
-        - REPO_DIR=$(find . -maxdepth 1 -type d -not -path "*/\.*" | head -n 1)
-        - echo "Repository directory: $REPO_DIR"
-        - cd "$REPO_DIR"
-        - ls -la
-        - if [ ! -d "client" ]; then echo "Client directory not found"; exit 1; fi
-        - cd client && npm ci
+        - 'echo "Current directory:"'
+        - 'pwd'
+        - 'echo "Directory contents:"'
+        - 'ls -la'
+        - 'echo "Moving to client directory..."'
+        - 'cd client'
+        - 'echo "Installing dependencies..."'
+        - 'npm ci'
     build:
       commands:
-        - npm run build
+        - 'echo "Building frontend..."'
+        - 'npm run build'
   artifacts:
     baseDirectory: client/.next
     files:
       - '**/*'
   cache:
     paths:
-      - client/node_modules/**/*
+      - 'client/node_modules/**/*'
 backend:
   phases:
     preBuild:
       commands:
-        - pwd
-        - ls -la
-        - REPO_DIR=$(find . -maxdepth 1 -type d -not -path "*/\.*" | head -n 1)
-        - echo "Repository directory: $REPO_DIR"
-        - cd "$REPO_DIR"
-        - ls -la
-        - if [ ! -d "server" ]; then echo "Server directory not found"; exit 1; fi
-        - cd server && npm ci
+        - 'echo "Current directory:"'
+        - 'pwd'
+        - 'echo "Directory contents:"'
+        - 'ls -la'
+        - 'echo "Moving to server directory..."'
+        - 'cd server'
+        - 'echo "Installing dependencies..."'
+        - 'npm ci'
     build:
       commands:
-        - npm run build
+        - 'echo "Building backend..."'
+        - 'npm run build'
   artifacts:
     baseDirectory: server/dist
     files:
       - '**/*'
   cache:
     paths:
-      - server/node_modules/**/* 
+      - 'server/node_modules/**/*' 
