@@ -7,6 +7,10 @@ frontend:
         - 'pwd'
         - 'echo "Directory contents:"'
         - 'ls -la'
+        - 'echo "Moving to parent directory..."'
+        - 'cd ..'
+        - 'echo "Parent directory contents:"'
+        - 'ls -la'
         - 'echo "Moving to client directory..."'
         - 'cd client'
         - 'echo "Installing dependencies..."'
@@ -30,8 +34,6 @@ backend:
         - 'pwd'
         - 'echo "Directory contents:"'
         - 'ls -la'
-        - 'echo "Moving to server directory..."'
-        - 'cd server'
         - 'echo "Installing dependencies..."'
         - 'npm ci'
     build:
@@ -39,9 +41,9 @@ backend:
         - 'echo "Building backend..."'
         - 'npm run build'
   artifacts:
-    baseDirectory: server/dist
+    baseDirectory: dist
     files:
       - '**/*'
   cache:
     paths:
-      - 'server/node_modules/**/*' 
+      - 'node_modules/**/*' 
