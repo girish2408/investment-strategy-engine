@@ -14,7 +14,7 @@ frontend:
         - 'echo "Moving to client directory..."'
         - 'cd client'
         - 'echo "Installing dependencies..."'
-        - 'npm ci'
+        - 'npm install'
     build:
       commands:
         - 'echo "Building frontend..."'
@@ -35,7 +35,7 @@ backend:
         - 'echo "Directory contents:"'
         - 'ls -la'
         - 'echo "Installing dependencies..."'
-        - 'npm ci'
+        - 'npm install'
     build:
       commands:
         - 'echo "Building backend..."'
