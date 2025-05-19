@@ -1,4 +1,4 @@
-import { OpenAI } from '@langchain/openai';
+import { ChatOpenAI } from '@langchain/openai';
 import bookProcessor from '../bookProcessor/bookProcessor.js';
 import { config } from '../../config/config.js';
 import axios from 'axios';
@@ -10,7 +10,7 @@ class StockAnalyzer {
       throw new Error('OpenAI API key is required');
     }
 
-    this.llm = new OpenAI({
+    this.llm = new ChatOpenAI({
       temperature: 0.3,
       modelName: 'gpt-4-turbo-preview',
       openAIApiKey: config.openaiApiKey

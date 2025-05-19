@@ -1,10 +1,10 @@
-import { OpenAI } from '@langchain/openai';
-import { PDFLoader } from 'langchain/document_loaders/fs/pdf';
+import { ChatOpenAI } from '@langchain/openai';
 import { OpenAIEmbeddings } from '@langchain/openai';
 import { Chroma } from '@langchain/community/vectorstores/chroma';
 import { config } from '../../config/config.js';
 import fs from 'fs/promises';
 import path from 'path';
+import pdfParse from 'pdf-parse';
 
 class BookProcessor {
   constructor() {
@@ -12,7 +12,7 @@ class BookProcessor {
       throw new Error('OpenAI API key is required. Please set OPENAI_API_KEY in your .env file');
     }
 
-    this.llm = new OpenAI({
+    this.llm = new ChatOpenAI({
       temperature: 0.3,
       modelName: 'gpt-4-turbo-preview',
       openAIApiKey: config.openaiApiKey
@@ -184,21 +184,9 @@ class BookProcessor {
 
   async processBook(fileBuffer, filename) {
     try {
-      // Save buffer to temporary file
-      const tempDir = path.join(process.cwd(), 'temp');
-      await fs.mkdir(tempDir, { recursive: true });
-      const tempFilePath = path.join(tempDir, filename);
-      await fs.writeFile(tempFilePath, fileBuffer);
-
-      // Load the PDF
-      const loader = new PDFLoader(tempFilePath);
-      const docs = await loader.load();
-      
-      // Clean up temp file
-      await fs.unlink(tempFilePath);
-
-      // Combine all pages into one text
-      const fullText = docs.map(doc => doc.pageContent).join('\n\n');
+      // Extract text from PDF using pdf-parse
+      const data = await pdfParse(fileBuffer);
+      const fullText = data.text;
 
       // Split text into maximum-sized chunks
       const chunks = this.splitIntoChunks(fullText);

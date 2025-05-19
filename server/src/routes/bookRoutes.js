@@ -12,11 +12,13 @@ router.use(authenticateToken);
 
 // Ensure uploads directory exists
 const uploadsDir = path.join(process.cwd(), 'uploads');
-try {
-  await fs.mkdir(uploadsDir, { recursive: true });
-} catch (error) {
-  console.error('Error creating uploads directory:', error);
-}
+(async () => {
+  try {
+    await fs.mkdir(uploadsDir, { recursive: true });
+  } catch (error) {
+    console.error('Error creating uploads directory:', error);
+  }
+})();
 
 const upload = multer({ storage: multer.memoryStorage() });
 

@@ -8,12 +8,33 @@ import { strategyRoutes } from './routes/strategyRoutes.js';
 const app = express();
 
 // Middleware
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://investment-strategy-engine.vercel.app',
+  'https://investment-strategy-engine.vercel.app'
+];
+
 app.use(cors({
-  origin: 'http://localhost:3000',  // Frontend origin
+  origin: function(origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: false  // Set to false since we're not using credentials
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'X-App-Name', 'X-App-URL'],
+  credentials: true,
+  preflightContinue: false,
+  optionsSuccessStatus: 204
 }));
+
+// Handle preflight requests
+app.options('*', cors());
+
 app.use(express.json());
 
 // Debug middleware to log all requests
