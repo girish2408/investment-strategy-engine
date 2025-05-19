@@ -6,26 +6,32 @@ applications:
           commands:
             # Install client dependencies
             - cd client
-            - npm install
-            # Install server dependencies
-            - cd ../server
-            - npm install
-            - cd ../client
+            - npm ci
         build:
           commands:
             # Build client
             - npm run build
-            # Build server
-            - cd ../server
-            - npm run build
-            - cd ../client
       artifacts:
         baseDirectory: client/.next
         files:
           - '**/*'
-          - '../server/dist/**/*'
       cache:
         paths:
           - client/node_modules/**/*
+  - backend:
+      phases:
+        preBuild:
+          commands:
+            - cd server
+            - npm ci
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: server/dist
+        files:
+          - '**/*'
+      cache:
+        paths:
           - server/node_modules/**/*
     appRoot: client 
