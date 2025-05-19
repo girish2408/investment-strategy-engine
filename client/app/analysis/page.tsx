@@ -80,7 +80,10 @@ export default function StockAnalysis() {
       const response = await fetch(ENDPOINTS.ANALYSIS + '/stock', {
         method: 'POST',
         headers: getHeaders(),
-        body: JSON.stringify({ symbol: symbol.toUpperCase() }),
+        body: JSON.stringify({ 
+          symbol: symbol.toUpperCase(),
+          strategyId: strategyId
+        }),
       });
 
       if (!response.ok) {
