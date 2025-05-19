@@ -3,8 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd client
-        - npm ci
+        - pwd
+        - ls -la
+        - if [ ! -d "client" ]; then echo "Client directory not found"; exit 1; fi
+        - cd client && npm ci
     build:
       commands:
         - npm run build
@@ -19,8 +21,10 @@ backend:
   phases:
     preBuild:
       commands:
-        - cd server
-        - npm ci
+        - pwd
+        - ls -la
+        - if [ ! -d "server" ]; then echo "Server directory not found"; exit 1; fi
+        - cd server && npm ci
     build:
       commands:
         - npm run build
