@@ -7,8 +7,6 @@ frontend:
         - 'pwd'
         - 'echo "Directory contents:"'
         - 'ls -la'
-        - 'echo "move back:"'
-        - 'cd..'
         - 'echo "Moving to client directory..."'
         - 'cd client'
         - 'echo "Client directory contents:"'
@@ -44,6 +42,8 @@ backend:
       commands:
         - 'echo "Building backend..."'
         - 'npm run build'
+        - 'echo "Backend build completed. Moving back to root directory..."'
+        - 'cd ..'
   artifacts:
     baseDirectory: server/dist
     files:
