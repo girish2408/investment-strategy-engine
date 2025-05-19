@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { BookOpenIcon, ArrowUpTrayIcon } from '@heroicons/react/24/outline';
 import axios from 'axios';
+import { ENDPOINTS, getHeaders } from '@/src/config/api';
 
 interface Strategy {
   strategyName: string;
@@ -38,8 +39,9 @@ export default function BookAnalysis() {
         formData.append('books', file);
       });
 
-      const response = await axios.post('http://localhost:3001/api/books/upload', formData, {
+      const response = await axios.post(ENDPOINTS.BOOKS + '/upload', formData, {
         headers: {
+          ...getHeaders(),
           'Content-Type': 'multipart/form-data',
         },
       });

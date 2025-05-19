@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { ENDPOINTS, getHeaders } from '@/src/config/api';
 
 interface Strategy {
   id: string;
@@ -60,7 +61,7 @@ export default function StockAnalysis() {
 
   const fetchStrategies = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/strategies');
+      const response = await fetch(ENDPOINTS.STRATEGIES);
       const data = await response.json();
       setStrategies(data);
     } catch (error) {
@@ -76,12 +77,10 @@ export default function StockAnalysis() {
     setAnalysis(null);
 
     try {
-      const response = await fetch('http://localhost:3001/api/analysis/stock', {
+      const response = await fetch(ENDPOINTS.ANALYSIS + '/stock', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ symbol, strategyId }),
+        headers: getHeaders(),
+        body: JSON.stringify({ symbol: symbol.toUpperCase() }),
       });
 
       if (!response.ok) {

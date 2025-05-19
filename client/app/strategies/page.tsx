@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { ENDPOINTS, getHeaders } from '@/src/config/api';
 
 interface Strategy {
   id: string;
@@ -25,7 +26,9 @@ export default function StrategiesPage() {
   useEffect(() => {
     const fetchStrategies = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/strategies');
+        const response = await axios.get(ENDPOINTS.STRATEGIES, {
+          headers: getHeaders()
+        });
         setStrategies(response.data);
       } catch (err) {
         setError('Failed to fetch strategies. Please try again.');
