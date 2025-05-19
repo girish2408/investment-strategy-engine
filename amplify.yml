@@ -5,12 +5,9 @@ applications:
       phases:
         preBuild:
           commands:
-            # Install client dependencies
-            - cd client
             - npm ci
         build:
           commands:
-            # Build client
             - npm run build
       artifacts:
         baseDirectory: .next
@@ -24,7 +21,6 @@ applications:
       phases:
         preBuild:
           commands:
-            - cd server
             - npm ci
         build:
           commands:
