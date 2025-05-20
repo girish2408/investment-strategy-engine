@@ -7,9 +7,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
     domains: [
-      'investment-strategy-engine.onrender.com',
-      'api.investment-strategy-engine.vercel.app',
-      'investment-strategy-engine.vercel.app'
+      'investment-strategy-engine.onrender.com'
     ],
   },
   // Configure environment variables
